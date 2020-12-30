@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+            <h3>Formulario para actualizar torre</h3>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <form class="col-lg-6 col-sm-6 col-md-6 col-xs-12" (ngSubmit)="onSubmit(form)" #form="ngForm">
+        <div class="row ">
+            <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12 ">
+                <div class="form-group ">
+                    <label for="codigo ">Codigo</label>
+                    <input class="form-control " type="number " [(ngModel)]="torre.codigo" name="codigo " disabled>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12 ">
+                <div class="form-group ">
+                    <label for="nombre ">Nombre</label>
+                    <input class="form-control" type="text" [(ngModel)]="torre.nombre" name="nombre " required>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12 ">
+                <div class="form-group ">
+                    <label for="cantidad_apto ">Cantidad de aptos</label>
+                    <input class="form-control " type="number" [(ngModel)]="torre.cantidad_apto" name="cantidad_apto " required>
+                </div>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12 ">
+                <div class="form-group ">
+                    <button class="btn btn-primary " type="submit" style="margin-right: 10px;">Actualizar torre</button>
+                    <button routerLink="/listadotorres " class="btn btn-primary " type="submit ">Regresar</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

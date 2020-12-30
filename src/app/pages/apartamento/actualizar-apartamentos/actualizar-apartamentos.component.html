@@ -1,0 +1,73 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+            <h3>Formulario para actualizar apartamento</h3>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <form class="col-lg-6 col-sm-6 col-md-6 col-xs-12" (ngSubmit)="onSubmit(form)" #form="ngForm">
+        <div class="row ">
+            <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12 ">
+                <div class="form-group ">
+                    <label for="codigo ">Codigo</label>
+                    <input class="form-control " type="text" [(ngModel)]="apartamento.codigo" name="codigo " disabled>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12 ">
+                <div class="form-group ">
+                    <label for="numero_apto">numero apartamento</label>
+                    <input class="form-control" type="number" [(ngModel)]="apartamento.numero_apto" name="numero_apto" disabled>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12 ">
+                <div class="form-group ">
+                    <label for="piso">Piso</label>
+                    <input class="form-control" type="number" [(ngModel)]="apartamento.piso" name="piso" required>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12 ">
+                <div class="form-group ">
+                    <label for="cant_habitaciones">Cantidad habitaciones</label>
+                    <input class="form-control" type="number" [(ngModel)]="apartamento.cant_habitaciones" name="cant_habitaciones" required>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12 ">
+                <div class="form-group ">
+                    <label for="precio_venta">Precio de venta</label>
+                    <input class="form-control" type="number" [(ngModel)]="apartamento.precio_venta" name="precio_venta" required>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12 ">
+                <div class="form-group ">
+                    <label for="precio_alquiler">Precio de alquiler</label>
+                    <input class="form-control" type="number" [(ngModel)]="apartamento.precio_alquiler" name="precio_alquiler" required>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12 ">
+                <div class="form-group ">
+                    <label for="codigoTorre">Codigo torre</label>
+                    <input class="form-control" type="number" [(ngModel)]="apartamento.codigoTorre" name="codigoTorre" required>
+                </div>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12 ">
+                <div class="form-group">
+                    <button class="btn btn-primary" type="submit" style="margin-right: 20px;">Insertar apartamento</button>
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12 ">
+                <div class="form-group">
+                    <button routerLink="/listadoapartamentos" class="btn btn-primary" type="submit">Regresar</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
